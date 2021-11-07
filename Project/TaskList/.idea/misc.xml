@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/qli/Desktop/cs196/Group30-FA21/Project/TaskList/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/qli/Desktop/cs196/Group30-FA21/Project/TaskList/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/qli/Desktop/cs196/Group30-FA21/Project/TaskList/app/src/main/res/layout/tasklist_layout.xml" value="0.1" />
         <entry key="..\:/Users/qli/Desktop/cs196/TaskList/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/cs196/Group30-FA21/Project/TaskList/app/src/main/res/layout/tasklist_layout.xml" value="0.228125" />
       </map>
     </option>
   </component>
