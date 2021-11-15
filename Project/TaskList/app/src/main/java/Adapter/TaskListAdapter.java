@@ -1,5 +1,6 @@
 package Adapter;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import java.util.List;
 
 import model.TaskModel;
 
-public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHolder>{
+public class TaskListAdapter extends Activity {
     private List<TaskModel> taskList;
     private Task activity;
 
@@ -22,14 +23,14 @@ public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.ViewHo
         this.activity = activity;
     }
 
-    public ViewHolder onCreatViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.task_layout, parent, false);
+                .inflate(R.layout.tasklist_layout, parent, false);
         return new ViewHolder(itemView);
     }
 
     public void onBindViewHolder(ViewHolder holder, int position) {
-        TaskModel item = 
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
