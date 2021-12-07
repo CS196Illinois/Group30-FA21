@@ -22,65 +22,6 @@
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="79dp">
-
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/monday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monday" />
-
-            <Button
-                android:id="@+id/tuesday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tuesday" />
-
-            <Button
-                android:id="@+id/wednesday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Wednesday" />
-
-            <Button
-                android:id="@+id/thursday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Thursday" />
-
-            <Button
-                android:id="@+id/friday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Friday" />
-
-            <Button
-                android:id="@+id/saturday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Saturday" />
-
-            <Button
-                android:id="@+id/sunday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sunday" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/taskRecyclerView"
         android:layout_width="match_parent"

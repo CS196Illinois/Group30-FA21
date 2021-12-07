@@ -8,36 +8,36 @@ import java.io.File;
 import java.time.LocalDateTime;
 
 public class TaskModel {
-    private LocalDateTime ddl;
-    private String taskName;
-    private String taskDescription;
-    private File attachedFile;
-    private String courseName;
-    private boolean submitted = false;
-    private int count = 1;
+    public LocalDateTime ddl;
+    public String taskTitle;
+    public String taskDescription;
+    public File attachedFile;
+    public String courseName;
+    public boolean submitted = false;
+    public int count = 1;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public TaskModel() {
         ddl = LocalDateTime.now();
-        taskName = "Task" + "(" + count + ")";
+        taskTitle = "Task" + "(" + count + ")";
         count++;
         taskDescription = "";
         courseName = "";
     }
-    public TaskModel(LocalDateTime ddlSet, String taskNameSet) {
+    public TaskModel(LocalDateTime ddlSet, String taskTitleSet) {
         this.ddl = ddlSet;
-        this.taskName = taskNameSet;
+        this.taskTitle = taskTitleSet;
     }
     public TaskModel(LocalDateTime ddlSet, String taskNameSet, String courseNameSet, String taskDescriptionSet) {
         this.ddl = ddlSet;
-        this.taskName = taskNameSet;
+        this.taskTitle = taskNameSet;
         this.taskDescription = taskDescriptionSet;
         this.courseName = courseNameSet;
     }
 
     public TaskModel(LocalDateTime ddlSet, String taskNameSet, String courseNameSet) {
         this.ddl = ddlSet;
-        this.taskName = taskNameSet;
+        this.taskTitle = taskNameSet;
         this.courseName = courseNameSet;
     }
 
@@ -55,7 +55,7 @@ public class TaskModel {
     }
 
     public void setTaskName(String taskName) {
-        this.taskName = taskName;
+        this.taskTitle = taskName;
     }
 
     public void setTaskDescription(String taskDescription) {
@@ -83,7 +83,7 @@ public class TaskModel {
     }
 
     public String getTaskName() {
-        return taskName;
+        return taskTitle;
     }
 
     public String getTaskDescription() {

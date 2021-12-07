@@ -1,10 +1,10 @@
 package Adapter;
 
-import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,31 +15,44 @@ import java.util.List;
 
 import model.TaskModel;
 
-public class TaskListAdapter extends Activity {
+public class TaskListAdapter extends RecyclerView.Adapter<TaskListAdapter.InnerHolder> {
     private List<TaskModel> taskList;
-    private Task activity;
 
-    public TaskListAdapter(Task activity) {
-        this.activity = activity;
+    public TaskListAdapter(List<TaskModel> taskList) {
+        this.taskList = taskList;
     }
 
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    @Override
+    public InnerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.tasklist_layout, parent, false);
-        return new ViewHolder(itemView);
+        return new InnerHolder(itemView);
+    }
+    @Override
+    public void onBindViewHolder(InnerHolder holder, int position) {
+        holder.setTask(taskList.get(position));
     }
 
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    @Override
+    public int getItemCount() {
+        if (taskList != null) {
+            return taskList.size();
+        }
+        return 0;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-         CheckBox task;
+    public static class InnerHolder extends RecyclerView.ViewHolder{
+         private CheckBox checkBox;
+         private TextView taskTitle;
 
-         ViewHolder(View view) {
-             super(view);
-             task = view.findViewById(R.id.taskCheckBox);
+         public InnerHolder(View itemView) {
+             super(itemView);
+             checkBox = itemView.findViewById(R.id.taskCheckBox);
+             taskTitle = itemView.findViewById(R.id.taskTitle);
          }
 
+        public void setTask(TaskModel task) {
+            taskTitle.setText(task.taskTitle);
+        }
     }
 }
